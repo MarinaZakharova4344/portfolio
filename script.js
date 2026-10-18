@@ -131,7 +131,7 @@
   }
   $$('[data-split-chars]').forEach((el) => split(el, 'chars'));
   $$('[data-split-words]').forEach((el) => split(el, 'words'));
-  $('.hero__title').setAttribute('aria-label', 'Junior-разработчик, Python, JavaScript, C++, SQL');
+  $('.hero__title').setAttribute('aria-label', 'Junior-разработчик, Python, JavaScript, C++');
 
   /* ---------- Плавный скролл (Lenis) и навигация ---------- */
 
