@@ -470,15 +470,15 @@
     'font: 14px Manrope, sans-serif; color: #c9c6cb; line-height: 1.6;',
   );
 
-  const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-  let konamiPos = 0;
+  // Храним последние 10 нажатий и сравниваем с кодом: лишние нажатия до него не мешают.
+  // e.code — физическая клавиша, поэтому B и A работают в любой раскладке (и с Caps Lock).
+  const KONAMI = 'ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight KeyB KeyA';
+  const pressed = [];
   document.addEventListener('keydown', (e) => {
-    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    const expected = KONAMI[konamiPos];
-    // поддержка русской раскладки: «и» = b, «ф» = a
-    const match = key === expected || (expected === 'b' && key === 'и') || (expected === 'a' && key === 'ф');
-    konamiPos = match ? konamiPos + 1 : (key === KONAMI[0] ? 1 : 0);
-    if (konamiPos === KONAMI.length) { konamiPos = 0; confetti(); }
+    if (e.repeat) return;
+    pressed.push(e.code);
+    if (pressed.length > 10) pressed.shift();
+    if (pressed.join(' ') === KONAMI) { pressed.length = 0; confetti(); }
   });
 
   function confetti() {
