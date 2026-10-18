@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Марина Захарова — Junior-разработчик</title>
+  <meta name="description" content="Марина Захарова — студентка ЛЭТИ («Программная инженерия»), junior-разработчик. Python, C++, SQL, базы данных. Санкт-Петербург, гибрид.">
+
+  <!-- Open Graph: превью ссылки в Telegram / LinkedIn / VK -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Марина Захарова — Junior-разработчик">
+  <meta property="og:description" content="Пишу код на Python и C++, работаю с SQL и базами данных. Ищу стажировку или junior-позицию в Санкт-Петербурге.">
+  <meta property="og:image" content="og-image.png"> <!-- TODO: положи картинку 1200×630 рядом с index.html -->
+  <meta name="theme-color" content="#1a1a1c">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231a1a1c'/%3E%3Ctext x='50%25' y='54%25' font-family='Arial' font-weight='700' font-size='24' fill='%23f4b4c4' text-anchor='middle' dominant-baseline='middle'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ===== Прелоадер ===== -->
+  <div class="preloader" aria-hidden="true">
+    <svg class="preloader__logo" viewBox="0 0 160 70">
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text>
+    </svg>
+    <span class="preloader__bar"><span></span></span>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== Шапка ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="В начало">MARINA<span>ZAKHAROVA</span></a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#projects">Проекты</a>
+        <a href="#path">Путь</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero" id="top">
+      <div class="shards" aria-hidden="true">
+        <span class="shard shard--1" data-depth="0.6"></span>
+        <span class="shard shard--2" data-depth="1.2"></span>
+        <span class="shard shard--3" data-depth="0.9"></span>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow" data-hero>Марина Захарова</p>
+          <h1 class="hero__title">
+            <span class="hero__bar" aria-hidden="true"></span>
+            <span class="hero__line" data-split-chars>Junior-разработчик,</span>
+            <span class="hero__line" data-split-chars>Python · C++ · SQL</span>
+          </h1>
+          <p class="hero__text" data-hero>
+            Студентка 3 курса «Программной инженерии» ЛЭТИ. Пишу понятный код, который решает задачу,
+            и ищу команду, где смогу приносить пользу с первых недель.
+          </p>
+          <div class="hero__actions" data-hero>
+            <a href="#contact" class="btn btn--accent magnetic"><span>Написать мне</span></a>
+            <a href="#projects" class="btn btn--line magnetic"><span>Проекты</span></a>
+          </div>
+          <p class="hero__status" data-hero><span class="status-dot"></span> Открыта к стажировке · Санкт-Петербург, гибрид</p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <span class="hero__glyph" data-depth="0.4">&lt;/&gt;</span>
+          <div class="win win--editor" data-depth="1">
+            <div class="win__bar"><i></i><i></i><i></i><span>main.py</span></div>
+            <pre class="win__body"><code><span class="t-kw">def</span> <span class="t-fn">hire</span>(candidate):
+    <span class="t-kw">if</span> candidate.<span class="t-fn">learns_fast</span>():
+        <span class="t-kw">return</span> <span class="t-str">"offer"</span>
+
+<span class="t-fn">hire</span>(Marina)  <span class="t-com"># ✓</span><span class="caret"></span></code></pre>
+          </div>
+          <div class="win win--term" data-depth="1.8">
+            <div class="win__bar"><i></i><i></i><i></i><span>terminal</span></div>
+            <pre class="win__body"><code>$ python main.py
+<span class="t-ok">offer</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <a href="#services" class="scroll-hint" aria-label="Прокрутить вниз"><span></span></a>
+    </section>
+
+    <!-- ===== Три карточки под hero ===== -->
+    <section class="services" id="services" aria-label="Что я умею">
+      <div class="container services__grid">
+        <article class="service is-active">
+          <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 14 7 24l10 10M31 14l10 10-10 10M27 10l-6 28"/></svg>
+          <h3 class="service__title">Разработка</h3>
+          <span class="dash" aria-hidden="true"></span>
+          <p>Python и C++ для задач и алгоритмов, HTML, CSS и JavaScript для сайтов. Последний проект — сайт ресторана с корзиной и формами.</p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="11" rx="14" ry="5"/><path d="M10 11v26c0 2.8 6.3 5 14 5s14-2.2 14-5V11M10 20c0 2.8 6.3 5 14 5s14-2.2 14-5M10 28.5c0 2.8 6.3 5 14 5s14-2.2 14-5"/></svg>
+          <h3 class="service__title">Базы данных</h3>
+          <span class="dash" aria-hidden="true"></span>
+          <p>Проектирую схемы, нормализую данные и пишу SQL-запросы под сценарии приложения.</p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12"/><path d="m30 30 10 10M15 24l4-5 4 3 4-6"/></svg>
+          <h3 class="service__title">Анализ задачи</h3>
+          <span class="dash" aria-hidden="true"></span>
+          <p>Сначала разбираюсь, какую проблему решаем, и только потом пишу код. Помогают статистика и бизнес-анализ.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 2. Обо мне ===== -->
+    <section class="section feature" id="about">
+      <div class="container feature__grid">
+        <div class="feature__text">
+          <p class="eyebrow" data-reveal>Обо мне</p>
+          <h2 class="title" data-split-words>Люблю, когда код просто работает</h2>
+          <span class="dash" data-reveal aria-hidden="true"></span>
+          <div class="feature__body" data-reveal>
+            <p>Я Марина, учусь на 3 курсе ЛЭТИ, ФКТИ, направление «Программная инженерия». Пишу на Python и C++, проектирую базы данных и пишу к ним SQL-запросы.</p>
+            <p>Мне нравится разбирать задачу на части, находить решение и доводить его до аккуратного, читаемого кода. Уже сделала и опубликовала сайт для ресторана, магазина и доставки «МясоMore». Быстро учусь, отвечаю за результат и не срываю сроки.</p>
+          </div>
+          <ul class="stats">
+            <li data-reveal><span class="stats__num" data-count="3">0</span><span class="stats__label">курс ЛЭТИ</span></li>
+            <li data-reveal><span class="stats__num" data-count="9" data-suffix="+">0</span><span class="stats__label">инструментов</span></li>
+            <li data-reveal><span class="stats__num" data-count="2028" data-from="2000">2000</span><span class="stats__label">диплом</span></li>
+          </ul>
+        </div>
+
+        <div class="media" data-clip>
+          <div class="media__inner" data-parallax>
+            <!-- «Студенческий пропуск» — можно заменить на <img src="photo2.jpg" alt="Марина Захарова"> -->
+            <div class="pass">
+              <div class="pass__head"><span>ЛЭТИ · ФКТИ</span><span>2024 — 2028</span></div>
+              <div class="pass__main">
+                <div class="pass__avatar"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 14 7 24l10 10M31 14l10 10-10 10"/></svg></div>
+                <div>
+                  <p class="pass__name">Марина Захарова</p>
+                  <p class="pass__role">Программная инженерия</p>
+                </div>
+              </div>
+              <dl class="pass__rows">
+                <div><dt>Курс</dt><dd>3</dd></div>
+                <div><dt>Стек</dt><dd>Python · C++ · SQL</dd></div>
+                <div><dt>Город</dt><dd>Санкт-Петербург</dd></div>
+                <div><dt>Статус</dt><dd class="is-accent">ищу стажировку</dd></div>
+              </dl>
+              <div class="pass__barcode" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Навыки ===== -->
+    <section class="section skills" id="skills">
+      <div class="shards shards--soft" aria-hidden="true"><span class="shard shard--4"></span></div>
+      <div class="container">
+        <p class="eyebrow" data-reveal>Навыки</p>
+        <h2 class="title" data-split-words>Инструменты, с которыми работаю</h2>
+        <span class="dash" data-reveal aria-hidden="true"></span>
+        <ul class="skills__grid">
+          <!-- Карточки генерируются из массива SKILLS в script.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 4. Проекты: чередующиеся блоки ===== -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="container projects__head">
+        <p class="eyebrow" data-reveal>Проекты</p>
+        <h2 class="title" id="projects-title" data-split-words>Что я уже сделала</h2>
+        <span class="dash" data-reveal aria-hidden="true"></span>
+      </div>
+      <div class="projects__list">
+        <!-- Блоки генерируются из массива PROJECTS в script.js -->
+      </div>
+    </section>
+
+    <!-- ===== 5. Путь ===== -->
+    <section class="section path" id="path">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Путь</p>
+        <h2 class="title" data-split-words>Как я сюда пришла</h2>
+        <span class="dash" data-reveal aria-hidden="true"></span>
+
+        <div class="steps">
+          <span class="steps__line" aria-hidden="true"><span class="steps__fill"></span></span>
+          <ol class="steps__list">
+            <li class="step">
+              <span class="step__year">2024</span>
+              <h3>Поступление в ЛЭТИ</h3>
+              <p>ФКТИ, «Программная инженерия». Первая серьёзная встреча с C++, алгоритмами и инженерным подходом к коду.</p>
+            </li>
+            <li class="step">
+              <span class="step__year">2025</span>
+              <h3>Базы данных и SQL</h3>
+              <p>Основы баз данных, SQL и теория вероятностей. Первые проекты, где код работает с настоящими данными.</p>
+            </li>
+            <li class="step">
+              <span class="step__year">2026</span>
+              <h3>3 курс</h3>
+              <p>Python, математическая статистика, бизнес-анализ. Собираю портфолио и ищу первую стажировку.</p>
+            </li>
+            <li class="step step--next">
+              <span class="step__year">Дальше</span>
+              <h3>Ваша команда?</h3>
+              <p>Хочу писать код для реальных задач и расти рядом с сильными разработчиками. Диплом в 2028.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Почему я ===== -->
+    <section class="section why" id="why">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Почему я</p>
+        <h2 class="title" data-split-words>Что получит команда</h2>
+        <span class="dash" data-reveal aria-hidden="true"></span>
+
+        <ul class="why__grid">
+          <li class="why__item" data-reveal>
+            <span class="why__num">01</span>
+            <h3>Быстрый старт</h3>
+            <p>Быстро разбираюсь в новых инструментах. Сначала ищу ответ сама, потом задаю точные вопросы.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="why__num">02</span>
+            <h3>Довожу до результата</h3>
+            <p>Если взялась за задачу, она будет сделана. Ответственность для меня привычка, а не строчка в резюме.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="why__num">03</span>
+            <h3>Сроки — это сроки</h3>
+            <p>Пунктуальна в мелочах и в дедлайнах. Если что-то идёт не по плану, предупреждаю заранее.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="why__num">04</span>
+            <h3>Понимаю зачем</h3>
+            <p>Знаю основы бизнес-анализа: сначала понимаю, какую проблему решает задача, потом пишу решение.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 7. Контакты ===== -->
+    <section class="section contact" id="contact">
+      <div class="shards" aria-hidden="true"><span class="shard shard--5"></span><span class="shard shard--6"></span></div>
+      <div class="container contact__grid">
+        <div>
+          <p class="eyebrow" data-reveal>Контакты</p>
+          <h2 class="title" data-split-words>Хотите работать вместе?</h2>
+          <span class="dash" data-reveal aria-hidden="true"></span>
+          <p class="contact__text" data-reveal>Открыта к стажировкам и junior-позициям в разработке. Санкт-Петербург, гибридный формат. Отвечаю быстро.</p>
+          <ul class="contact__links" data-reveal>
+            <li><button type="button" class="contact__link copy-email" data-email="mooorrriinaa@mail.ru"><span>Email</span>mooorrriinaa@mail.ru</button></li>
+            <li><a class="contact__link" href="https://t.me/mooorrriinaa" target="_blank" rel="noopener"><span>Telegram</span>@mooorrriinaa</a></li>
+            <li><a class="contact__link" href="resume.pdf" download="Захарова_Марина_резюме.pdf"><span>Резюме</span>Скачать PDF</a></li>
+          </ul>
+        </div>
+
+        <form class="form" data-reveal novalidate>
+          <div class="form__row">
+            <label class="field"><input type="text" name="name" placeholder=" " required><span>Имя</span></label>
+            <label class="field"><input type="email" name="email" placeholder=" " required><span>Email</span></label>
+          </div>
+          <label class="field"><textarea name="message" rows="3" placeholder=" " required></textarea><span>Сообщение</span></label>
+          <button type="submit" class="btn btn--accent magnetic"><span>Отправить</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">MARINA<span>ZAKHAROVA</span></a>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#about">Обо мне</a><a href="#skills">Навыки</a><a href="#projects">Проекты</a><a href="#path">Путь</a><a href="#contact">Контакты</a>
+      </nav>
+      <span class="footer__copy">© 2026 · ↑↑↓↓←→←→BA</span>
+    </div>
+  </footer>
+
+  <!-- ===== Модалка проекта ===== -->
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <article class="modal__panel" data-lenis-prevent>
+      <button class="modal__close" type="button" aria-label="Закрыть" data-close>×</button>
+      <div class="modal__content"></div>
+    </article>
+  </div>
+
+  <!-- Библиотеки анимаций -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
